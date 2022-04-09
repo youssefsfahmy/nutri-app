@@ -1,0 +1,107 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-header {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  .main-div{
+      width: 100vw;
+      overflow: hidden;
+      display: flex;
+  }
+  .calories-div{
+    margin-left: 15vw;
+      display: flex;
+      flex-direction: column;
+    width: 25vw;
+    height: 27vw;
+    /* background-color: blue; */
+  }
+.food-div{
+    /* background-color: aquamarine; */
+    width: 75vw;
+    height: 27vw;
+    display: flex;
+    flex-wrap: wrap;  
+        margin-right: 14vw;
+       margin-left: 8vw;
+       overflow-y: auto;
+}
+.searchbar-div{
+    /* background-color: aquamarine; */
+    width: 100vw;
+    height: 4vw;
+    display: flex;
+    justify-content: center;
+  }
+  .titles-div{
+    color:#666666;
+    height: 2.75vw;
+  display:flex;
+  font-size: 1.2vw;
+  font-weight: bold;
+}
+.title1-div{
+  width: 20vw;
+  margin-left: 15.5vw;
+  text-align: left;
+}
+.title2-div{
+  margin-left: 9vw;
+width: 25vw;
+height: 1vw;
+text-align: left;
+}
+.filter-div{
+  margin-left: 8.5vw;
+width: 15vw;
+height: 1vw;
+text-align: left;
+}
+.food-div-inner{
+  width: 75vw;
+  height: 27vw;
+  display: flex;
+  flex-wrap: wrap;  
+
+}
+.logout-button{
+  float: right;
+  margin-right: 2vw;
+}
+.calories-button{
+  float: left;
+  margin-left: 2vw;
+}
+.notificationBarErrr{
+  background-color: rgba(128, 128, 128, 0.2);
+  height: 1.5vw;
+  color:red;
+  font-size: 1vw;
+  width: 70vw;
+  margin-left: 15.5vw;
+  text-align: center;
+  border-radius: 0.25vw;
+  transition: 3s linear;
+  opacity: 1;
+}
+.notificationBar{
+  color:green !important;
+  background-color: rgba(52, 194, 0, 0.5) !important;
+  height: 1.5vw;
+  font-size: 1vw;
+  width: 70vw;
+  margin-left: 15.5vw;
+  text-align: center;
+  border-radius: 0.25vw;
+  transition: 3s linear;
+  opacity: 0;
+}

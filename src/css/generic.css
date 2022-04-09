@@ -1,0 +1,96 @@
+.main-card {
+    border-radius:0.5vw;
+    border-style: solid;
+    border-width: 0.1vw;
+    border-color: #cecece;
+    width: 40vw;
+    height:fit-content;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    color: #888888;  
+    box-shadow: 0px 0px 3px #CCCCCC;
+    text-align: center;
+    place-content: center;
+    padding-bottom: 4vw;
+}
+h1 {
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    font-size: 1.8vw;
+}
+p {
+    font-size: 1vw;
+    color: #0055ff;
+
+}
+a {
+    font-size: 1vw;
+    color: #0055ff;
+
+}
+p {
+    font-size: 1vw;
+    color: red;
+
+}
+input {
+    transition: 0.2s;
+    width: 27vw;
+    height: 2.5vw;
+    border-radius: 3vw;
+    border-color:#CCCCCC !important ;
+    border-style: solid;
+    border-width: 0.15vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    padding-top: 0.1vw;
+    padding-bottom: 0.1vw;
+    font-size: 1vw;
+    color: #CCCCCC;
+    margin-bottom: 2vw;
+}
+input:focus-visible {
+    width: 26.8vw;
+    height: 2.3vw;
+    border-radius: 3vw;
+    border-color:#888888 !important ;
+    border-style: solid;
+    border-width: 0.25vw;
+    padding-top: 0.1vw;
+    padding-bottom: 0.1vw;
+    font-size: 1vw;
+    color: #888888;
+}
+
+input[type="text"], input[type="password"], textarea, select { 
+    outline: none;
+}
+
+button {
+    transition: 0.3s;
+    width: 10vw;
+    height: 2.75vw;
+    border-radius: 3vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    padding-top: 0.1vw;
+    padding-bottom: 0.1vw;
+    border-color:#CCCCCC !important ;
+    background-color: #CCCCCC;
+    border-style: solid;
+    color: white;
+    font-size: 1vw;
+    margin-bottom: 1.5vw;
+
+}
+button:hover {
+   
+    border-color:#0055ff !important ;
+    background-color: #0055ff;
+    border-style: solid;
+    color: white;
+    font-size: 1vw;
+    cursor: pointer;
+
+}

@@ -1,0 +1,15 @@
+.inputs {
+    width: 4vw;
+    margin: 1vw;
+    padding-right: 0.5vw;
+}
+.inputs:focus-visible {
+    width: 4vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+.div-filter {
+    color:#888888;
+    font-size: 1.2vw;
+    text-align: center;
+}
