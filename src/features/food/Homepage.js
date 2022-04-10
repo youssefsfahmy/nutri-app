@@ -7,6 +7,8 @@ import Foodcard from "../../components/Foodcard.js";
 import SearchBar from "../../components/SearchBar";
 import Sort from "../../components/Sort";
 import Filter from "../../components/Filter";
+import { isMobile } from "react-device-detect";
+
 import {
   checkauth,
   logout,
@@ -24,6 +26,7 @@ import {
   show_all_food_asc,
   show_all_food_desc,
 } from "./foodSlice";
+import SortM from "../../components/SortM";
 
 export default function Homepage() {
   const [choice, setChoice] = React.useState("Name");
@@ -112,52 +115,67 @@ export default function Homepage() {
   return (
     <div>
       <br />
-      <button className="logout-button" onClick={handlelogout}>
+      <button
+        className={isMobile ? "logout-button-m" : "logout-button"}
+        onClick={handlelogout}
+      >
         Logout{" "}
       </button>
-      <button className="calories-button" onClick={handleCalories}>
+      <button
+        className={isMobile ? "calories-button-m" : "calories-button"}
+        onClick={handleCalories}
+      >
         Edit calorie intake{" "}
       </button>
 
-      <div className="searchbar-div">
+      <div className={isMobile ? "searchbar-div-m" : "searchbar-div"}>
         <SearchBar setSearchWord={setSearchWord} setSearch={setSearch} />
       </div>
-      <div
-        style={{
-          backgroundColor: "rgba(128, 128, 128, 0.2)",
-          height: "1.5vw",
-          color: "black",
-          fontSize: "1vw",
-          width: "70vw",
-          marginLeft: "15.5vw",
-          textAlign: "center",
-          borderRadius: "0.25vw",
-        }}
-        className={foodState === "succeed" ? "notificationBar" : ""}
-      >
-        {foodState === "loading" ? (
-          "loading"
-        ) : foodState === "succeed" ? (
-          "Food item added Succesfully"
-        ) : foodState === "failed" ? (
-          <div>{error}</div>
-        ) : (
-          "Click to add items"
-        )}{" "}
-      </div>
-      <div className="titles-div">
-        <div className="title1-div">Goal</div>
-        <div className="title2-div">Food Items</div>
-        <div className="filter-div">
-          <Sort setChoice={setChoice} choice={choice} />
+      {isMobile ? (
+        ""
+      ) : (
+        <div
+          style={{
+            backgroundColor: "rgba(128, 128, 128, 0.2)",
+            height: "1.5vw",
+            color: "black",
+            fontSize: "1vw",
+            width: "70vw",
+            marginLeft: "15.5vw",
+            textAlign: "center",
+            borderRadius: "0.25vw",
+          }}
+          className={foodState === "succeed" ? "notificationBar" : ""}
+        >
+          {foodState === "loading" ? (
+            "loading"
+          ) : foodState === "succeed" ? (
+            "Food item added Succesfully"
+          ) : foodState === "failed" ? (
+            <div>{error}</div>
+          ) : (
+            "Click to add items"
+          )}{" "}
         </div>
-      </div>
-      <div className="main-div">
-        <div className="calories-div">
+      )}
+      {isMobile ? (
+        ""
+      ) : (
+        <div className="titles-div">
+          <div className="title1-div">Goal</div>
+          <div className="title2-div">Food Items</div>
+          <div className="filter-div">
+            <Sort setChoice={setChoice} choice={choice} />
+          </div>
+        </div>
+      )}
+      <div className={isMobile ? "main-div-m" : "main-div"}>
+        <div className={isMobile ? "calories-div-m" : "calories-div"}>
           <Caloriescard text={"Total Calories Needed"} number={calories} />
           <Caloriescard text={"Remaining Calories"} number={remaining} />
         </div>
-        <div className="food-div">
+        {isMobile ? <SortM setChoice={setChoice} choice={choice} /> : ""}
+        <div className={isMobile ? "food-div-m" : "food-div"}>
           {foodsfiltered.map((item) => {
             return (
               <Foodcard

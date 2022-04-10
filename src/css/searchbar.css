@@ -22,3 +22,127 @@
     height: 2vw;
     top:0.55vw;
 }
+.main-search-div {position: relative;
+}
+
+/* MOBILE CSS */
+
+
+.search-icon {position:absolute;
+    left: 0.85vw;
+    top: 0.75vw;
+    height: 1.5vw;
+    width: 1.5vw;
+    opacity: 0.5;
+
+}
+.search-bar {
+    padding-left: 2.85vw;
+
+}.search-bar:focus-visible {
+    padding-left: 2.7vw;
+
+}
+.search-button {
+    position: absolute;
+    width: 7vw;
+    left:24vw;
+    height: 2vw;
+    top:0.55vw;
+}
+
+/* MOBILE CSS */
+
+
+
+
+.search-icon-m {position:absolute;
+    left: 2vw;
+    top:2vw;
+    height: 5vw;
+    width: 5vw;
+    opacity: 0.5;
+
+}
+.search-bar-m {
+    width: 75vw;
+    height: 8vw;
+    border-radius: 3vw;
+    border-color:#CCCCCC !important ;
+    border-style: solid;
+    border-width: 0.15vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 0.1vw;
+    padding-bottom: 0.1vw;
+    font-size: 4vw;
+    color: #CCCCCC;
+    margin-bottom: 7vw;
+    padding-left: 10vw;
+
+}.search-bar-m:focus-visible {
+    transition: 0.2s;
+    width: 75vw;
+    height: 7.5vw;
+    border-radius: 3vw;
+    border-color:#888888 !important ;
+    border-style: solid;
+    border-width: 0.5vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 0.1vw;
+    padding-bottom: 0.1vw;
+    font-size: 4vw;
+    color: #888888;
+    margin-bottom: 7vw;
+    padding-left: 9.5vw;
+
+}
+.search-button-m {
+
+    position: absolute;
+    width: 7vw;
+    left:24vw;
+    height: 2vw;
+    top:0.55vw;
+}
+.main-search-div {position: relative;
+}
+
+/* MOBILE CSS */
+
+
+.search-icon {position:absolute;
+    left: 0.85vw;
+    top: 0.75vw;
+    height: 1.5vw;
+    width: 1.5vw;
+    opacity: 0.5;
+
+}
+.search-bar {
+    padding-left: 2.85vw;
+
+}.search-bar:focus-visible {
+    padding-left: 2.7vw;
+
+}
+.search-button-m {
+    transition: 0.3s;
+    width: 20vw;
+    height: 6.5vw;
+    border-radius:2vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    padding-top: 0.3vw;
+    padding-bottom: 0vw;
+    border-color:#CCCCCC !important ;
+    background-color: #CCCCCC;
+    border-style: solid;
+    color: white;
+    font-size: 3vw;
+    margin-bottom: 5vw;
+    position: absolute;
+    left:67vw;
+    top:1.1vw;
+}

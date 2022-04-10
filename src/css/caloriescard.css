@@ -18,3 +18,29 @@
     font-size: 2.75vw;
     font-weight: bold;
 }
+
+/* MOBILE CSS */
+
+.cardcal-m{
+    text-align: center;
+    height: 25vw;
+    width: 43vw;
+    background-color: #BBBBBB;
+    border-radius:1vw;
+    margin: 0.5vw;
+    text-align: start;
+    padding-left: 0vw;
+}
+.text-m {
+    text-align: center;
+    margin-top: 8vw;
+    font-size: 3.5vw;
+    font-weight:500;
+}
+.number-m {
+    text-align: center;
+    margin-top: 3vw;
+
+    font-size: 5vw;
+    font-weight: bolder;
+}

@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { selectToken } from "../features/user/userSlice";
 import axios from "axios";
 import { backendLink } from "../keys_dev";
+import { isMobile } from "react-device-detect";
 
 export default function Foodcard(props) {
   const dispatch = useDispatch();
@@ -37,15 +38,22 @@ export default function Foodcard(props) {
     dispatch(subtract_calories({ calories: props.cal, token: token }));
   };
   return (
-    <div className="cardfood">
-      <div className="image-div">
-        <img className="image" alt="img" src={src}></img>
+    <div className={isMobile ? "cardfood-m" : "cardfood"}>
+      <div className={isMobile ? "image-div-m" : "image-div"}>
+        <img
+          className={isMobile ? "image-m" : "image"}
+          alt="img"
+          src={src}
+        ></img>
       </div>
-      <div className="name">{props.name} </div>
-      <div className="cal">
+      <div className={isMobile ? "name-m" : "name"}>{props.name} </div>
+      <div className={isMobile ? "cal-m" : "cal"}>
         Calories: {props.cal} cal per {props.serving} g
       </div>
-      <button className="card-button" onClick={handleclick}>
+      <button
+        className={isMobile ? "card-button-m" : "card-button"}
+        onClick={handleclick}
+      >
         Add item
       </button>
     </div>

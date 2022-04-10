@@ -1,4 +1,5 @@
 import React from "react";
+import { isMobile } from "react-device-detect";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
 
@@ -39,13 +40,16 @@ export default function Calories() {
   };
 
   return (
-    <div className="App-header">
-      <div className={"main-card"}>
-        <h1>Please set your calorie daily intake!</h1>
+    <div className={isMobile ? "App-header-m" : "App-header"}>
+      <div className={isMobile ? "main-card-m" : "main-card"}>
+        <h1 className={isMobile ? "h1-m" : ""}>
+          Please set your calorie daily intake!
+        </h1>
 
         <form onSubmit={onSignup}>
           <label>
             <input
+              className={isMobile ? "input-m" : ""}
               required={true}
               type="number"
               name="caloriesperday"
@@ -54,7 +58,7 @@ export default function Calories() {
             />
 
             <br />
-            <button> Finish </button>
+            <button className={isMobile ? "button-m" : ""}> Finish </button>
             <br />
           </label>
         </form>

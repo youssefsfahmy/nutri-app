@@ -1,34 +1,37 @@
 import React from "react";
-import "../css/sortM.css";
+import "../css/sort.css";
 
-export default function Sort(props) {
+export default function SortM(props) {
   return (
-    <div className="dropdown">
-      <button className="dropbtn">
-        Sort by: <a className="text-filter"> {props.choice}</a>
-      </button>
-      <div className="dropdown-content">
-        <a
+    <div className="main-div-sort">
+      Sort by:
+      <div className="sub-div">
+        <button
+          className="button-filter"
           onClick={() => {
             props.setChoice("Name");
           }}
         >
           Name
-        </a>
-        <a
+        </button>
+        <button
+          className="button-filter"
           onClick={() => {
             props.setChoice("Lowest Cal");
           }}
         >
+          {" "}
           Lowest Calories
-        </a>
-        <a
+        </button>
+        <button
+          className="button-filter"
           onClick={() => {
             props.setChoice("Highest Cal");
           }}
         >
+          {" "}
           Highest Calories
-        </a>
+        </button>
       </div>
     </div>
   );

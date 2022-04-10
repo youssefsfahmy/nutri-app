@@ -1,4 +1,5 @@
 import React from "react";
+import { isMobile } from "react-device-detect";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
 
@@ -47,11 +48,12 @@ export default function Signup() {
   // });
 
   return (
-    <div className="App-header">
-      <div className={"main-card"}>
-        <h1>Create a new account</h1>
+    <div className={isMobile ? "App-header-m" : "App-header"}>
+      <div className={isMobile ? "main-card-m" : "main-card"}>
+        <h1 className={isMobile ? "h1-m" : ""}>Create a new account</h1>
         <form onSubmit={onSignup}>
           <input
+            className={isMobile ? "input-m" : ""}
             required="required"
             onChange={handleChange}
             type="fullName"
@@ -59,6 +61,7 @@ export default function Signup() {
             placeholder="Full Name"
           />
           <input
+            className={isMobile ? "input-m" : ""}
             required="required"
             onChange={handleChange}
             type="Email"
@@ -66,6 +69,7 @@ export default function Signup() {
             placeholder="E-mail"
           />
           <input
+            className={isMobile ? "input-m" : ""}
             pattern="(?=.*\d)(?=.*[\W_]).{7,}"
             title="Minimum of 7 characters. Should have at least one special character and one number."
             required="required"
@@ -75,6 +79,7 @@ export default function Signup() {
             placeholder="Password"
           />
           <input
+            className={isMobile ? "input-m" : ""}
             required="required"
             onChange={handleChange}
             type="password"
@@ -135,9 +140,11 @@ export default function Signup() {
           </div>
 
           <br />
-          <button>Sign In </button>
+          <button className={isMobile ? "button-m" : ""}>Sign In </button>
           <br />
-          <a href="/login">Already have an account?</a>
+          <a className={isMobile ? "a-m" : ""} href="/login">
+            Already have an account?
+          </a>
         </form>
       </div>{" "}
     </div>

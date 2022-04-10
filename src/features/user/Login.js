@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 import { userLogin } from "./userSlice";
 
+import { isMobile } from "react-device-detect";
+
 export default function Login() {
   const navigate = useNavigate();
 
@@ -51,12 +53,14 @@ export default function Login() {
   // }, [token]);
 
   return (
-    <div className="App-header">
-      <div className={"main-card"}>
+    <div className={isMobile ? "App-header-m" : "App-header"}>
+      <div className={isMobile ? "main-card-m" : "main-card"}>
         {/* Use the Submit handler with our own submit handler*/}
         <form>
-          <h1>Login to an existing account</h1>{" "}
-          <div style={{ color: "red", fontSize: "1vw" }}>
+          <h1 className={isMobile ? "h1-m" : ""}>
+            Login to an existing account
+          </h1>{" "}
+          <div style={{ color: "red", fontSize: isMobile ? "3vw" : "1vw" }}>
             {userStatus === "loading" ? (
               "loading"
             ) : userStatus === "succeeded" ? (
@@ -70,30 +74,36 @@ export default function Login() {
             )}
           </div>
           <input
+            className={isMobile ? "input-m" : ""}
             onChange={handleChange}
             name="email"
             type="text"
             id="email"
-            className="email"
             placeholder="E-mail"
             label="Email"
             component="input"
           />
           <input
+            className={isMobile ? "input-m" : ""}
             onChange={handleChange}
             name="password"
             type="password"
             id="password"
-            className="password"
             placeholder="Password"
             label="Password"
             component="input"
           />
-          <button type="button" onClick={onLogin}>
+          <button
+            type="button"
+            className={isMobile ? "button-m" : ""}
+            onClick={onLogin}
+          >
             SIGN IN
           </button>
           <br />
-          <a href="/signup">Don't have an account?</a>
+          <a className={isMobile ? "a-m" : ""} href="/signup">
+            Don't have an account?
+          </a>
         </form>
       </div>
     </div>

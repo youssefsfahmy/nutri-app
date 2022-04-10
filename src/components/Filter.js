@@ -10,10 +10,10 @@ export default function Filter(props) {
     props.setFiltered(true);
   };
   return (
-    <div className="div-filter">
+    <div className="div-filter-m">
       Apply calorie filter :
       <input
-        className="inputs"
+        className="inputs-m"
         type="number"
         name="fullname"
         placeholder="From"
@@ -32,7 +32,7 @@ export default function Filter(props) {
         value={min}
       />
       <input
-        className="inputs"
+        className="inputs-m"
         type="number"
         name="fullname"
         placeholder="To"
@@ -51,7 +51,9 @@ export default function Filter(props) {
         }}
         value={max}
       />
-      <button onClick={handleClick}>Apply Filter</button>
+      <button className="filter-button-m" onClick={handleClick}>
+        Apply Filter
+      </button>
     </div>
   );
 }
