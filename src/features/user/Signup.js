@@ -140,7 +140,7 @@ export default function Signup() {
           </div>
 
           <br />
-          <button className={isMobile ? "button-m" : ""}>Sign In </button>
+          <button className={isMobile ? "button-m" : ""}>Sign up </button>
           <br />
           <a className={isMobile ? "a-m" : ""} href="/login">
             Already have an account?

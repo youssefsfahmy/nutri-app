@@ -136,7 +136,7 @@ export const userSlice = createSlice({
       .addCase(userSignup.fulfilled, (state, action) => {
         if (action.payload.statusCode !== 0) {
           state.status = "failed";
-
+          console.log(action.payload);
           state.error = action.payload.error;
         } else {
           state.status = "succeededd";

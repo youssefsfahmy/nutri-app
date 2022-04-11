@@ -1,4 +1,5 @@
 import React from "react";
+import { isMobile } from "react-device-detect";
 import "../css/filter.css";
 export default function Filter(props) {
   const [min, setMin] = React.useState("");
@@ -10,10 +11,10 @@ export default function Filter(props) {
     props.setFiltered(true);
   };
   return (
-    <div className="div-filter-m">
+    <div className={isMobile ? "div-filter-m" : "div-filter"}>
       Apply calorie filter :
       <input
-        className="inputs-m"
+        className={isMobile ? "inputs-m" : "inputs"}
         type="number"
         name="fullname"
         placeholder="From"
@@ -32,7 +33,7 @@ export default function Filter(props) {
         value={min}
       />
       <input
-        className="inputs-m"
+        className={isMobile ? "inputs-m" : "inputs"}
         type="number"
         name="fullname"
         placeholder="To"
@@ -51,7 +52,10 @@ export default function Filter(props) {
         }}
         value={max}
       />
-      <button className="filter-button-m" onClick={handleClick}>
+      <button
+        className={isMobile ? "filter-button-m" : "filter-button"}
+        onClick={handleClick}
+      >
         Apply Filter
       </button>
     </div>
